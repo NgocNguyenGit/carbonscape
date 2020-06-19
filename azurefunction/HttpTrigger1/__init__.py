@@ -1,24 +1,17 @@
 import logging
-
+import json
+import pathlib
 import azure.functions as func
 
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
-    logging.info('Python HTTP trigger function processed a request.')
-
-    name = req.params.get('name')
-    if not name:
-        try:
-            req_body = req.get_json()
-        except ValueError:
-            pass
-        else:
-            name = req_body.get('name')
-
-    if name:
-        return func.HttpResponse(f"Hello {name}!")
-    else:
+    try:
+        data = ''
+        with open(pathlib.Path(__file__).parent / 'data.geojson') as f:
+            data = json.load(f)
+        return func.HttpResponse(json.dumps(data), mimetype='application/json')
+    except Exception as ex:
         return func.HttpResponse(
-             "Please pass a name on the query string or in the request body",
-             status_code=400
+            "Error: "+str(ex),
+            status_code=400
         )
