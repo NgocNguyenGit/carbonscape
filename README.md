@@ -1,2 +1,2 @@
-# carbonscape
-JunctionXAsia project
+# CarbonScape
+JunctionXAsia project by team **HackovidX**
