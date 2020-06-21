@@ -5,6 +5,8 @@ JunctionXAsia project by team **HackovidX**
 
 ## Prototype app is accessible at [https://carbonscape.azurewebsites.net/](https://carbonscape.azurewebsites.net/)
 
+## Azure Functions data API at [https://hackovidxheatmap.azurewebsites.net/api/cousage](https://hackovidxheatmap.azurewebsites.net/api/cousage)
+
 ## Technologies Used
 * Azure Maps - To render maps and show heatmap and airflow
 * Azure Functions with Python - To make a data API
