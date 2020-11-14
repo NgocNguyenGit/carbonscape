@@ -15,3 +15,6 @@ JunctionXAsia project by team **HackovidX**
 * React JS - To build frontend components
 * Python 3.6 - To make the API for Azure Functions
 * Figma - For Rapid Prototyping
+
+## My contribution
+UX designer & researcher
